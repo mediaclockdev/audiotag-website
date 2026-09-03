@@ -25,7 +25,7 @@
         --volt: #2b44e8;
         --tint: #edf2fc;
         --line: #d3dff3;
-        --muted: #4a6291;
+        --muted: #243351;
         --display: "Archivo", system-ui, sans-serif;
         --body: "Inter", system-ui, sans-serif;
         --mono: "IBM Plex Mono", ui-monospace, monospace;
@@ -570,14 +570,10 @@
           <a href="/privacy">Privacy Policy</a>
           <a href="/terms">Terms of Use</a>
           <a href="/support">Support</a>
-          <a class="btn btn-primary mobile-btn" href="/"
-            >Back to Home</a
-          >
+          <a class="btn btn-primary mobile-btn" href="/">Back to Home</a>
         </div>
         <div class="nav-actions">
-          <a class="btn btn-primary desktop-btn" href="/"
-            >Back to Home</a
-          >
+          <a class="btn btn-primary desktop-btn" href="/">Back to Home</a>
           <button
             class="menu-btn"
             id="menuBtn"
@@ -669,7 +665,7 @@
             <ul>
               <li>
                 <strong>Account Information:</strong> Your name, email address,
-                and payment details when you purchase credit packs.
+                and payment details when you subscribe to a plan.
               </li>
               <li>
                 <strong>Voice Data:</strong> Audio recordings used to rename
@@ -702,7 +698,9 @@
                 Provide, maintain, and improve the Audiotag app and its
                 features.
               </li>
-              <li>Process purchases and manage your credit balance.</li>
+              <li>
+                Process your subscription payments and manage your account.
+              </li>
               <li>
                 Generate PDF reports based on your photos and voice notes.
               </li>
@@ -879,7 +877,7 @@
         navLinks.querySelectorAll("a").forEach((link) => {
           let href = link.getAttribute("href");
           if (href !== "/") href = href.replace(/\/$/, "");
-          
+
           if (
             href === currentPath ||
             currentPath.endsWith(href) ||

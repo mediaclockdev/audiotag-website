@@ -25,7 +25,8 @@
         --volt: #2b44e8;
         --tint: #edf2fc;
         --line: #d3dff3;
-        --muted: #4a6291;
+        --muted: #243351;
+
         --display: "Archivo", system-ui, sans-serif;
         --body: "Inter", system-ui, sans-serif;
         --mono: "IBM Plex Mono", ui-monospace, monospace;
@@ -668,14 +669,10 @@
           <a href="/privacy">Privacy Policy</a>
           <a href="/terms">Terms of Use</a>
           <a href="/support">Support</a>
-          <a class="btn btn-primary mobile-btn" href="/"
-            >Back to Home</a
-          >
+          <a class="btn btn-primary mobile-btn" href="/">Back to Home</a>
         </div>
         <div class="nav-actions">
-          <a class="btn btn-primary desktop-btn" href="/"
-            >Back to Home</a
-          >
+          <a class="btn btn-primary desktop-btn" href="/">Back to Home</a>
           <button
             class="menu-btn"
             id="menuBtn"
@@ -743,15 +740,14 @@
           </div>
 
           <div class="faq-item">
-            <button class="faq-q">
-              What are credits and how do they work?
-            </button>
+            <button class="faq-q">How much does Audiotag cost?</button>
             <div class="faq-a">
               <p>
-                One credit lets you voice-rename one photo. Credits are
-                purchased in packs (Starter — 100 credits for $5, Site Pack —
-                250 credits for $10, Team Pack — 750 credits for $25). Credits
-                never expire and there is no subscription to cancel.
+                Audiotag operates on a flat monthly subscription. The Standard
+                plan is $5/month and gives you unlimited voice renaming and
+                searching. The Pro plan is $10/month and unlocks all features,
+                including PDF report generation and batch processing. You can
+                cancel anytime.
               </p>
             </div>
           </div>
@@ -808,15 +804,16 @@
 
           <div class="faq-item">
             <button class="faq-q">
-              Can I get a refund on purchased credits?
+              How do I cancel or request a refund for my subscription?
             </button>
             <div class="faq-a">
               <p>
-                All purchases are processed through the Apple App Store or
-                Google Play Store. Refund requests are handled according to
-                their respective refund policies. If you believe there has been
-                an error with your purchase, please contact us and we'll do our
-                best to help.
+                All subscription payments are processed through the Apple App
+                Store or Google Play Store. Subscription cancellations and
+                refund requests are handled directly through your device's app
+                store settings according to their respective policies. If you
+                believe there has been an error with your billing, please
+                contact us.
               </p>
             </div>
           </div>
@@ -965,7 +962,7 @@
         navLinks.querySelectorAll("a").forEach((link) => {
           let href = link.getAttribute("href");
           if (href !== "/") href = href.replace(/\/$/, "");
-          
+
           if (
             href === currentPath ||
             currentPath.endsWith(href) ||

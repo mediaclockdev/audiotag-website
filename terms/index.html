@@ -25,7 +25,8 @@
         --volt: #2b44e8;
         --tint: #edf2fc;
         --line: #d3dff3;
-        --muted: #4a6291;
+        --muted: #243351;
+
         --display: "Archivo", system-ui, sans-serif;
         --body: "Inter", system-ui, sans-serif;
         --mono: "IBM Plex Mono", ui-monospace, monospace;
@@ -570,14 +571,10 @@
           <a href="/privacy">Privacy Policy</a>
           <a href="/terms">Terms of Use</a>
           <a href="/support">Support</a>
-          <a class="btn btn-primary mobile-btn" href="/"
-            >Back to Home</a
-          >
+          <a class="btn btn-primary mobile-btn" href="/">Back to Home</a>
         </div>
         <div class="nav-actions">
-          <a class="btn btn-primary desktop-btn" href="/"
-            >Back to Home</a
-          >
+          <a class="btn btn-primary desktop-btn" href="/">Back to Home</a>
           <button
             class="menu-btn"
             id="menuBtn"
@@ -630,8 +627,8 @@
                 >
               </li>
               <li>
-                <a href="#4-credits-amp-purchases" class="toc-link"
-                  ><span class="toc-num">4</span> Credits &amp; Purchases</a
+                <a href="#4-subscriptions-amp-billing" class="toc-link"
+                  ><span class="toc-num">4</span> Subscriptions &amp; Billing</a
                 >
               </li>
               <li>
@@ -725,22 +722,29 @@
           </div>
 
           <div class="wrap-box">
-            <h2 id="4-credits-amp-purchases" style="scroll-margin-top: 140px">
-              4. Credits &amp; Purchases
+            <h2
+              id="4-subscriptions-amp-billing"
+              style="scroll-margin-top: 140px"
+            >
+              4. Subscriptions & Billing
             </h2>
             <p>
-              Audiotag operates on a credit-based system. The following terms
-              apply to purchases:
+              Audiotag operates on a monthly subscription model. The following
+              terms apply to your subscription:
             </p>
 
             <ul>
-              <li>One credit allows you to rename one photo using voice.</li>
               <li>
-                Credits are purchased through in-app purchases via the Apple App
-                Store or Google Play Store.
+                Subscriptions provide unlimited voice renaming and are billed
+                monthly.
               </li>
               <li>
-                Credits do not expire and there is no subscription to cancel.
+                Subscriptions are managed and billed through in-app purchases
+                via the Apple App Store or Google Play Store.
+              </li>
+              <li>
+                Subscriptions automatically renew unless canceled at least 24
+                hours before the end of the current billing period.
               </li>
               <li>
                 All purchases are final and non-refundable, except where
@@ -749,7 +753,7 @@
               </li>
               <li>
                 Pricing is subject to change. Any changes will apply to future
-                purchases only.
+                billing cycles and you will be notified in advance.
               </li>
             </ul>
           </div>
@@ -966,7 +970,7 @@
         navLinks.querySelectorAll("a").forEach((link) => {
           let href = link.getAttribute("href");
           if (href !== "/") href = href.replace(/\/$/, "");
-          
+
           if (
             href === currentPath ||
             currentPath.endsWith(href) ||
