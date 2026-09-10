@@ -670,6 +670,7 @@
       .card h3,
       .plan h3 {
         font-size: 24px;
+        line-height: 1.2;
         margin-bottom: 8px;
       }
       .card p {
@@ -943,6 +944,149 @@
           justify-content: center;
         }
       }
+    
+      /* Business Application Grid */
+      .biz-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        margin-top: 40px;
+      }
+      .biz-card {
+        background: #fff;
+        border: 2px solid var(--line);
+        border-radius: 20px;
+        padding: 32px 28px;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+      }
+      .biz-card:hover {
+        transform: translateY(-3px);
+        border-color: var(--blue);
+        box-shadow: 0 16px 36px rgba(7, 26, 61, 0.08);
+      }
+      .biz-num {
+        font-family: var(--mono);
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--volt);
+        background: rgba(43, 68, 232, 0.08);
+        padding: 4px 10px;
+        border-radius: 999px;
+        display: inline-block;
+        width: fit-content;
+        margin-bottom: 16px;
+      }
+      .biz-card h3 {
+        font-family: var(--display);
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.25;
+        margin-bottom: 12px;
+        color: var(--ink);
+      }
+      .biz-card p {
+        font-family: var(--body);
+        font-size: 16px;
+        line-height: 1.55;
+        color: var(--muted);
+      }
+      @media (max-width: 960px) {
+        .biz-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 640px) {
+        .biz-grid {
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+        .biz-card {
+          padding: 24px 20px;
+        }
+      }
+
+      /* EMS Spotlight */
+      .ems-spotlight {
+        margin-top: 48px;
+        background: var(--ink);
+        color: #fff;
+        border-radius: 24px;
+        padding: clamp(24px, 4vw, 44px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 20px 50px rgba(7, 26, 61, 0.3);
+      }
+      .ems-head {
+        margin-bottom: 28px;
+      }
+      .ems-badge {
+        display: inline-block;
+        font-family: var(--mono);
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        background: var(--volt);
+        color: #fff;
+        padding: 4px 12px;
+        border-radius: 999px;
+        margin-bottom: 12px;
+      }
+      .ems-head h3 {
+        font-family: var(--display);
+        font-weight: 800;
+        font-size: clamp(24px, 3.5vw, 32px);
+        line-height: 1.15;
+        color: #fff;
+        margin-bottom: 8px;
+      }
+      .ems-head p {
+        font-family: var(--body);
+        color: #c8d8f3;
+        font-size: clamp(16px, 2vw, 18px);
+        line-height: 1.5;
+        max-width: 65ch;
+      }
+      .ems-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+      .ems-item {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 16px;
+        padding: 22px 24px;
+      }
+      .ems-item h4 {
+        font-family: var(--display);
+        font-weight: 700;
+        color: #fff;
+        font-size: 18px;
+        line-height: 1.25;
+        margin-bottom: 8px;
+      }
+      .ems-item p {
+        font-family: var(--body);
+        color: #c8d8f3;
+        font-size: 15px;
+        line-height: 1.55;
+        margin: 0;
+      }
+      @media (max-width: 768px) {
+        .ems-grid {
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+        .ems-item.full-col {
+          grid-column: auto !important;
+        }
+        .ems-spotlight {
+          padding: 24px 20px;
+        }
+      }
+
     </style>
   </head>
   <body>
@@ -956,6 +1100,7 @@
         /></a>
         <div class="nav-links" id="navLinks">
           <a href="#how">How it works</a>
+          <a href="#business">Business</a>
           <a href="#reports">Reports</a>
           <a href="#pricing">Pricing</a>
           <a class="btn btn-primary mobile-btn" href="#download">Download</a>
@@ -983,15 +1128,14 @@
     <section class="hero" id="top">
       <div class="wrap hero-grid">
         <div>
-          <span class="eyebrow">iOS &amp; Android</span>
+          <span class="eyebrow">Voice to Text · AI Data Processing</span>
           <h1>
-            Name the photo <em>while you're still standing in front of it</em>
+            Easily give your photos a name... <em>so you can always find them</em>
           </h1>
           <div class="slash" style="color: var(--volt)"></div>
           <p class="lead">
-            Audiotag renames and sorts your job photos from your voice. Speak
-            once on site, and every shot lands back at the office already
-            labelled, in order, and ready for the report.
+            <strong style="color: var(--ink); display: block; margin-bottom: 8px; font-weight: 700;">See the picture. Say the name. Save the file.</strong>
+            Audiotag renames and sorts your job photos with instant voice-to-text and AI data processing. Every shot lands back at the office already labelled, organized, and ready for rapid reporting.
           </p>
           <div class="cta-row">
             <a class="btn btn-primary" href="#download">Download the app</a>
@@ -1048,9 +1192,35 @@
       <div class="wrap">
         <div class="section-head">
           <span class="eyebrow">How it works</span>
-          <h2>Shoot it. Say it. Send it.</h2>
+          <h2>See the picture. Say the name. Save the file.</h2>
+          <p class="lead" style="color: var(--muted); font-size: 20px; margin-top: 12px;">
+            A fast slideshow workflow designed for effortless, hands-free photo renaming on site.
+          </p>
         </div>
         <div class="trio">
+          <div class="card">
+            <div class="ic">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+                <circle cx="9" cy="9" r="2" />
+                <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+              </svg>
+            </div>
+            <h3>1. Import &amp; Slideshow</h3>
+            <p>
+              Import the pictures you want to rename. Photos appear in a clean slideshow format, ready for sequential renaming.
+            </p>
+          </div>
           <div class="card">
             <div class="ic">
               <svg
@@ -1071,39 +1241,16 @@
                 <line x1="12" x2="12" y1="19" y2="22" />
               </svg>
             </div>
-            <h3>Speak the name</h3>
+            <h3>2. Voice Command &amp; Save</h3>
             <p>
-              Hold the mic and describe the shot. Audiotag writes the filename,
-              so you never type on a ladder or in the rain.
+              Look at the photo, press the mic, and say your chosen name. Check the text and press Save to store and automatically cue the next photo.
             </p>
           </div>
-          <div class="card">
-            <div class="ic">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"
-                />
-                <path d="m9 13 2 2 4-4" />
-              </svg>
+          <div class="card" style="border-color: var(--blue); position: relative; background: #fff;">
+            <div style="position: absolute; top: -12px; right: 24px; background: var(--blue); color: #fff; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 3px 10px; border-radius: 999px;">
+              Pro Feature
             </div>
-            <h3>Nothing gets lost</h3>
-            <p>
-              Photos stay in date-taken order and the original metadata is never
-              overwritten.
-            </p>
-          </div>
-          <div class="card">
-            <div class="ic">
+            <div class="ic" style="background: rgba(43, 68, 232, 0.1); color: var(--volt);">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="22"
@@ -1124,10 +1271,9 @@
                 <path d="M16 17H8" />
               </svg>
             </div>
-            <h3>Notes become reports</h3>
+            <h3>3. Notes &amp; AI Context</h3>
             <p>
-              Dictate the full observation on each photo, then export the job as
-              a PDF with images and notes side by side.
+              Attach up to 1,000 characters of contextual notes per photo. Your image now carries rich structured data ready for instant, audit-proof reports and AI summaries.
             </p>
           </div>
         </div>
@@ -1208,6 +1354,64 @@
               <li>Card and amount on every invoice</li>
               <li>Downloadable tax receipts</li>
             </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BUSINESS APPLICATION -->
+    <section id="business" style="padding-block: clamp(72px, 8vw, 120px);">
+      <div class="wrap">
+        <div class="section-head" style="max-width: 860px;">
+          <span class="eyebrow">Business Application</span>
+          <h2>Benefits for Reporting and Summary Generation</h2>
+          <p class="lead" style="color: var(--muted); font-size: 20px;">
+            Audiotag is an essential tool for businesses dealing with reports and summaries. By enhancing accuracy, efficiency, and clarity in documentation, it empowers organizations across all industries—from Real Estate and Construction to Insurance Assessors and Emergency Services.
+          </p>
+        </div>
+
+        <div class="biz-grid">
+          <div class="biz-card">
+            <div class="biz-num">01</div>
+            <h3>Streamlined Report Creation</h3>
+            <p>
+              Simplifies report generation by allowing users to attach relevant information directly to images via voice-to-text, enhancing quality and clarity.
+            </p>
+          </div>
+          <div class="biz-card">
+            <div class="biz-num">02</div>
+            <h3>Customizable Templates</h3>
+            <p>
+              Offers customizable report templates that integrate images and contextual information, catering to specific client needs and regulatory requirements.
+            </p>
+          </div>
+          <div class="biz-card">
+            <div class="biz-num">03</div>
+            <h3>Real-Time Collaboration</h3>
+            <p>
+              Supports real-time updates, enabling instant access to completed reports. Images captured on-site can have context added immediately, with AI generating reports and uploading them to the cloud within minutes.
+            </p>
+          </div>
+          <div class="biz-card">
+            <div class="biz-num">04</div>
+            <h3>Historical Documentation and Tracking</h3>
+            <p>
+              Maintains a library of contextually named images for efficient tracking of historical data related to projects or claims, invaluable for audits and compliance checks.
+            </p>
+          </div>
+          <div class="biz-card">
+            <div class="biz-num">05</div>
+            <h3>Enhanced Client Presentations</h3>
+            <p>
+              Facilitates visually rich content in reports, engaging clients and showcasing professionalism.
+            </p>
+          </div>
+          <div class="biz-card">
+            <div class="biz-num">06</div>
+            <h3>Improved Compliance and Accountability</h3>
+            <p>
+              Provides detailed images with context to meet regulatory requirements effectively, ensuring a clear audit trail for accountability.
+            </p>
           </div>
         </div>
       </div>
@@ -1313,26 +1517,64 @@
     </section>
 
     <!-- WHO IT'S FOR -->
-    <section>
+    <section style="background: var(--tint); border-block: 1px solid var(--line); padding-block: clamp(72px, 8vw, 100px);">
       <div class="wrap">
         <div class="section-head">
           <span class="eyebrow">Who uses it</span>
           <h2>
             If your day ends with 200 photos called IMG_4821, this is for you.
           </h2>
+          <p class="lead" style="color: var(--muted); font-size: 19px;">
+            Trusted by field professionals, on-site trades, and emergency response teams across Australia.
+          </p>
         </div>
         <div class="tags">
-          <span class="tag">Property inspections</span>
-          <span class="tag">Building &amp; pest</span>
-          <span class="tag">Insurance assessing</span>
-          <span class="tag">Real estate</span>
-          <span class="tag">Builders &amp; trades</span>
-          <span class="tag">Strata managers</span>
+          <span class="tag">Emergency Services (EMS)</span>
+          <span class="tag">Incident &amp; Disaster Response</span>
+          <span class="tag">Property Inspections</span>
+          <span class="tag">Building &amp; Pest</span>
+          <span class="tag">Insurance Assessing</span>
+          <span class="tag">Builders &amp; Trades</span>
+          <span class="tag">Real Estate</span>
+          <span class="tag">Strata Managers</span>
+        </div>
+
+        <!-- EMERGENCY SERVICES SPOTLIGHT CARD -->
+        <div class="ems-spotlight">
+          <div class="ems-head">
+            <div class="ems-badge">Industry Focus</div>
+            <h3>Emergency Services</h3>
+            <p>
+              Utilizing images with voice-to-text context offers the fastest and most accurate way to document information, streamlining processes and improving communication quality when seconds count.
+            </p>
+          </div>
+          <div class="ems-grid">
+            <div class="ems-item">
+              <h4>Incident Documentation</h4>
+              <p>Emergency responders can capture images of storm damage, fire incidents, or medical emergencies. Adding detailed descriptions helps create comprehensive reports that can be used for investigations or legal purposes.</p>
+            </div>
+            <div class="ems-item">
+              <h4>Resource Management</h4>
+              <p>Document the condition and status of emergency equipment and vehicles with contextual images. This ensures that all resources are accounted for and maintained properly.</p>
+            </div>
+            <div class="ems-item">
+              <h4>Training and Evaluation</h4>
+              <p>Use the app to document training exercises, providing visual evidence of procedures and outcomes. This can help in evaluating performance and improving future training programs.</p>
+            </div>
+            <div class="ems-item">
+              <h4>Public Safety Reports</h4>
+              <p>Enhance community safety reports with images that illustrate hazards or incidents, making it easier for the public to understand risks and for agencies to address them effectively.</p>
+            </div>
+            <div class="ems-item full-col" style="grid-column: 1 / -1;">
+              <h4>Collaboration with Other Agencies</h4>
+              <p>When working alongside other emergency services, the app allows for clear documentation that can be shared among agencies, improving coordination and response efforts.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-        <!-- PRICING -->
+    <!-- PRICING -->
     <section id="pricing" style="background: var(--tint); border-block: 1px solid var(--line); padding-block: 30px;">
       <div class="wrap" style="max-width: 900px;">
         <div class="section-head" style="text-align: center; margin-bottom: 64px;">
